@@ -1,188 +1,217 @@
-/*==================================================
-	Sitewide Styles
-==================================================*/
-/*select all things - seriously use this one very wisely*/
+/** SITE STYLES **/
 * {
-	color: #000;
+    color: #000;
 }
-/*select the body tag*/
+
 body {
-	background: none repeat scroll 0 0 #fff;
     color: #222;
     margin:0;
 }
-/*select all anchor tags*/
-a {	
-	color:#222;
-	text-decoration: none;
+
+a { 
+    color:#222;
+    text-decoration: none;
 }
-/*select all anchor tags that are hovered on*/
+
 a:hover {
-	color: #222;
-	text-decoration: underline;
+    color: #222;
+    text-decoration: underline;
 }
-/*select all anchor tags that have a class of button and are hovered on*/
+
 a.button:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
-/*==================================================
-	Top Section - Navigation
-==================================================*/
-/*select any elements with a class of topNav*/
-.topNav {
-	float:right;
-	margin-right: 25px;
+
+/** SITE NAVIGATION **/
+div.navigation {
+	height: 75px;
 }
-/*select any elements with a class of topNav and find any li tags inside those*/
-.topNav li{
-	list-style: none;
+#menu-icon{
+    display: hidden;
+    width: 40px;
+    height: 40px;
+    background: url("..img/menu.png");
+}
+div.navigation ul {
+	float: right;
+    margin-right: 25px;
+    margin-top: 0;
+}
+
+div.navigation  li {
 	display: inline-block;
-	padding: 5px 10px 0 0;
-	vertical-align: bottom;
+    font-size: 13px;
 	margin: 5px 5px 0 0;
-	font-size: 13px;
+    padding: 5px 10px 0 0;
+    vertical-align: bottom;
 }
-/*select any elements with a class of topNav, then find any li tags inside, and any a tags inside of those */
-.topNav li a {
-	position: relative;
-	top:-3px;
+
+div.navigation a {
+	color: #626065;
+	font-size: 14px;
 }
-/*select the font awesome standard class .fa - this is the link found in the <head> of your index.html*/
+
+div.navigation a:hover {
+	color: black;
+}
+/** NAVIGATION ICONS **/
 .fa {
-	font-size: 20px;
-	vertical-align: top;
-	opacity: 0.7;
-	cursor: default;
+    cursor: default;
+    font-size: 16px !important;
+    opacity: 0.7;
+    vertical-align: top;
 }
-/*select the font awesome class .fa on user hoverhover*/
+
 .fa:hover {
-	opacity: 1.0;
-	cursor: pointer;
+    cursor: pointer;
+    opacity: 1;
+}
+/** NAVIGATION SHARE **/
+.share {
+    background-color: #f2f2f2;
+    cursor: default;
+    padding: 10px 15px;
 
 }
-/*select any elements with a class of shareButton*/
-.shareButton {
-	background-color: #f2f2f2;
-	padding:7px 15px;
-	cursor: default;
-	position: relative;
-    top: -3px;
+
+.share:hover {
+    background-color: #E1E1E1;
+    cursor: pointer;
 }
-/*select any elements with a class of shareButton that is hovered on*/
-.shareButton:hover {
-	background-color: #E1E1E1;
-	cursor: pointer;
-}
-/*select any elements with a class of profileImg*/
-.profileImg {
-	border-radius: 25px;
-	height: 32px;
-    width: 32px;
+
+.profile {
+    border-radius: 25px;
+    height: 32px;
     position: relative;
-    top: 7px;
+    top: 10px;
+    width: 32px;
 }
-/*==================================================
-	Middle Section - Search Box
-==================================================*/
-/*select any elements with a class of searchBox*/
-.searchBox {
-	position: absolute;
-	margin-top:75px;
-	width:100%;
+
+/** CTA GOOGLE LOGO **/
+.cta {
+    height: 364px;
+    margin-top: 150px;
 }
-/*select any elements with a class of searchBox and then find any img tags inside*/
-.searchBox img {
-	padding:142px 0 24px 0;
-	display: block;
-	margin:0 auto;
+
+.cta .logo {
+    text-align: center;
 }
-/*select any elements with a class of searchBox and then find any input tags inside*/
-.searchBox input {
-	width: 600px;
+
+.cta input {
+    border: 1px solid #d9d9d9;
+    display: block;
+    font-size: 16px;
+    height: 30px;
     margin: 0 auto;
     padding: 5px;
-    border: 1px solid #d9d9d9;
-    font-size: 16px;
-    border-radius: 5px;
-    display: block;
+    width: 600px;
 }
-/*select any elements with a class of searchBox and then find any input tags inside that are currently focused*/
-.searchBox input:focus {
-	border-color: #f5f5f5;
-}
-/*select any elements with a class of searchButtons*/
-.searchButtons  {
+
+/** GOOGLE SEARCH **/
+.search {
 	text-align: center;
-	padding-left: 0;
 }
-/*select any elements with a class of searchButtons and find all button tags inside*/
-.searchButtons button{
+
+.search button {
     background-color: #f5f5f5;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    color: #666;
+    color: gray;
+    cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-    line-height: 27px;
     margin: 17px 6px;
-    padding: 0 12px;
-    display: inline-block;
-    cursor: pointer;
+    padding: 10px 15px;
 }
-/*select any elements with a class of searchButtons and find all button tags inside when the user hovers over them*/
-.searchButtons button:hover{
+
+.search button:hover {
 	background-color:#f8f8f8;
 	border: 1px solid #c6c6c6;
-    box-shadow:0 1px 1px rgba(0,0,0,0.1);
     color:#333;
-} 
-/*==================================================
-	Bottom Section - Site Links
-==================================================*/
-/*select any elements with a class of bottomLinks and do this*/
-.bottomLinks {
-	bottom: 0 !important;
-	position: absolute;
-	width:100%;
-	background-color: #f2f2f2;
-	border-top: 1px solid #e4e4e4; 
 }
-/*select any elements with a class of left and select any elements with a class of right and do this*/
-.left, 
-.right {
-	margin: 0;
+
+/** FOOTER **/
+div.footer {
+	background-color: #f5f5f5;
+	border-top: 1px solid #e4e4e4;
+    height: 50px;
+    width: 100%;
+    font-size: 10px;
 }
-/*select any elements with a class of left and do this*/
-.left {
-	float:left;
-	padding-left:20px;
+
+div.footer ul.left {
+	float: left;
 }
-/*select any elements with a class of right and do this*/
-.right {
-	float:right;
-	padding-right:10px;
+
+div.footer ul.right{
+	float: right;
+    padding-right: 40px;
 }
-/*select any elements with a class of left and find all li tags inside and select any elements with a class of right-site-links and find all li tags inside*/
-.left li, 
-.right li {
-	list-style: none;
-	display: inline;
-	line-height: 40px;
+
+div.footer li {
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px 5px 0 0;
+    padding: 5px 10px 0 0;
+    vertical-align: bottom;
 }
-/*select any elements with a class of right and find all li tags inside then the 1st anchor tags inside*/
-.right li a:first-child {
-	padding-right:8px;
+
+/*=====MEDIA=====*/
+
+@media (max-width: 625px){
+    .cta input{
+        width: 60%;
+    }
 }
-/*select any elements with a class of left and find all li tags inside then the 2nd anchor tags inside and select any elements with a class of left and find all li tags inside then the 3rd anchor tags inside*/
-.left li:nth-child(2), 
-.left li:nth-child(3) {
-	margin-left:7px;
+@media (max-width: 490px){
+    .left{
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .right{
+        margin: 0 auto;
+        float: none;
+        width: 80%;
+        padding: 0;
+        text-align: center;
+    }
 }
-/*select any elements with a class of left and find all li tags inside then all the anchor tags inside and select any elements with a class of right and find all li tags inside then all the anchor tags inside*/
-.left li a,
-.right li a {
-	color: #666;
-    margin: 2px 10px 0;
-    letter-spacing: 0.1px;
-    font-size: 14px;
+@media (max-width: 455px){
+
+    .profile{
+        display: none;
+    }
+    .share{
+        display: none;
+    }
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
